@@ -22,7 +22,31 @@
 
 <details>
 <summary>⎈ Kubernetes</summary>
-
 | Проблема | Решение | Ссылка |
 | :--- | :--- | :--- |
+</details>
+
+<details>
+  <summary>
+    CI/CD
+    
+  </summary>
+</details>
+
+<details>
+  <summary>
+    Linux
+  </summary>
+</details>
+
+<details>
+  <summary>
+    Сети
+  </summary>
+</details>
+
+<details>
+  <summary>
+    📊 Мониторинг и парсинг логов
+  </summary>
 </details>
