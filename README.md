@@ -26,7 +26,7 @@
 | Проблема | Решение | Ссылка |
 | :--- | :--- | :--- |
 | Динамически не настроились PVC и таймауты при деплое GitLab | Редактирование StorageClass, ручное создание бакетов и фикс MTU | [Решение](./K8s-troubleshooting/gitlab-k8s-pvc-network-fix.md) |
-| Установка K8s через бинарники | - | [Решение](.)
+| Установка K8s через бинарники | Кратко не опишешь | [Решение](./K8s-troubleshooting/K8s-binary-installing.md)
 </details>
 
 <details>
