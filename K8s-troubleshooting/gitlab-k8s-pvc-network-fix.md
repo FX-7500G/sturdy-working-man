@@ -67,8 +67,11 @@ kubectl rollout restart daemonset -n kube-system calico-node
   ```
 </details>
 
-##### 4.3 Настройка хостов
+##### 4.2 Настройка хостов
 Смотрим какие домены нужны на хосте через `kubectl get ingress -n gitlab` и прописываем их в файле `hosts` на хостовой ОС (подсказка. На винде это путь `C:\Windows\System32\drivers\etc\hosts` )
 
-##### 4.4 Проброс маршрута
+##### 4.3 Проброс маршрута
+Пробрасываем маршруты на хосте для получения доступа к сервисам виртуалки
+```DOS
 route add 192.168.0.<required MetalLB_IP> mask 255.255.255.255 <Virtual machine IP>
+```
