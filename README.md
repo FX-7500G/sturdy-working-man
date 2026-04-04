@@ -9,7 +9,9 @@ CI/CD: GitLab CI, ArgoCD
 IaC: Ansible, Vagrant   
 Виртуализация: Proxmox VE   
 
-Контактная информация:    
+---
+###  Контактная информация:
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FX_7500G)  
 Telegram: @FX_7500G    
 Email: alekcwdsa@gmail.com    
 
@@ -33,23 +35,23 @@ Email: alekcwdsa@gmail.com
 | Недоступность APT-репозиториев K8s | Установка бинарников напрямую, настройка containerd, ручное создание systemd-unit | [Решение](./K8s-troubleshooting/K8s-binary-installing.md)
 </details>
 
-<details>
+<details open>
   <summary> CI/CD </summary>
-
-  
+    
+ | Проблема | Решение | Ссылка |
+| :--- | :--- | :--- |
+| Legacy Pipeline Refactoring | Устранение ошибок SSL , миграция переменных, Внедрение цикла ожидания готовности Docker-демона | [Решение](./CI-CD-troubleshooting/legacy-k8s-deploy.md) |
   
 </details>
 
 <details>
   <summary> Linux </summary>
 
-    
 </details>
 
 <details>
   <summary> Сети </summary>
 
-    
 </details>
 
 <details>
