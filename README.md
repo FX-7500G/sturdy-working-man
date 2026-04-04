@@ -58,7 +58,7 @@ Email: alekcwdsa@gmail.com
 
 | Проблема | Решение | Ссылка |
 | :--- | :--- | :--- |
-| Автоматизация развёртывания Docker (Ansible) | Написание плейбука для DNF/YUM, управление правами пользователя | ./ |
+| Автоматизация развёртывания Docker (Ansible) | Написание плейбука для DNF/YUM, управление правами пользователя | [Решение](./IaC-troubleshooting/Ansible-docker-automation.md) |
   
 </details>
 
