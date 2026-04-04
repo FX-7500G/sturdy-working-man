@@ -1,26 +1,13 @@
 # DevOps Troubleshooting
-Всем хай! Я Junior DevOps-инженер. Здесь собраны разборы реальных технических кейсов, с которыми я столкнулся при развертывании и эксплуатации как чужой, так и своей инфраструктуры
+Hi, Everyone! A collection of real infrastructure problems I've debugged and solved.
 
-Технологический стек:    
-Оркестрация/Контейниризация: Kubernetes, Docker, Docker Compose    
-Мониторинг/Логи: ELK Stack (Elasticsearch, Logstash, Kibana), Grafana + Prometheus           
-Система: Linux (Ubuntu/Debian), Windows    
-CI/CD: GitLab CI, ArgoCD  
-IaC: Ansible, Vagrant   
-Виртуализация: Proxmox VE   
-
----
-###  Контактная информация:
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/FX_7500G)  
-Telegram: @FX_7500G    
-Email: alekcwdsa@gmail.com    
-
-## Кейсы 
+---  
+## Cases 
 
 <details>
 <summary>🐳 Docker </summary>
 
-| Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Ошибка 'no such host' (IPv6) | Отключение IPv6 и настройка DNS | [Решение](./Docker-troubleshooting/combating-IPv6-priotization.md) |
 | Миграция конфигов Nginx и SSL | Извлечение конфигов из работающего конта через bash -c, настройка HTTPS редиректа | ./  |
@@ -30,7 +17,7 @@ Email: alekcwdsa@gmail.com
 <details>
 <summary>⎈ Kubernetes</summary>
   
-| Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Динамически не настроились PVC и таймауты при деплое GitLab | Редактирование StorageClass, ручное создание бакетов и фикс MTU | [Решение](./K8s-troubleshooting/gitlab-k8s-pvc-network-fix.md) |  
 | Недоступность `apt`-репозиториев K8s | Установка бинарников напрямую, настройка containerd, ручное создание systemd-unit | [Решение](./K8s-troubleshooting/K8s-binary-installing.md) |
@@ -39,7 +26,7 @@ Email: alekcwdsa@gmail.com
 <details open>
   <summary> CI/CD </summary>
     
- | Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Legacy Pipeline Refactoring | Устранение ошибок SSL , миграция переменных, Внедрение цикла ожидания готовности Docker-демона | [Решение](./CI-CD-troubleshooting/legacy-k8s-deploy.md) |
   
@@ -48,7 +35,7 @@ Email: alekcwdsa@gmail.com
 <details>
   <summary> Linux </summary>
 
-| Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 
 
@@ -56,23 +43,23 @@ Email: alekcwdsa@gmail.com
 <details>
   <summary> IaC </summary>
 
-| Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Автоматизация развёртывания Docker (Ansible) | Написание плейбука для DNF/YUM, управление правами пользователя | [Решение](./IaC-troubleshooting/Ansible-docker-automation.md) |
   
 </details>
 
 <details>
-  <summary> Сети </summary>
+  <summary> Network </summary>
   
-| Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Отсутствие удаленного доступа к виртуальной машине через SSH | Смена сетевого интерфейса с NAT на Bridged для получения общего IP, конфигурация статического IP через netplan, настройка UFW | [Решение](./Network-troubleshooting/vm-ssh-access.md) |
 
 </details>
 
 <details>
-  <summary>📊 Мониторинг и парсинг логов  </summary>
+  <summary>📊 Monitoring and parsing logs  </summary>
 
 | Проблема | Решение | Ссылка |
 | :--- | :--- | :--- |
