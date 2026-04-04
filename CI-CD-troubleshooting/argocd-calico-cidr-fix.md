@@ -158,7 +158,55 @@ kubectl apply -f newest-ippool.yaml
 kubectl rollout restart deployment -n argocd
 kubectl rollout restart statefulset -n argocd
 ```
-- Ждём когда появятся:
+- Ждём когда появятся поды:
 ```bash
 kubectl get pods -n argocd -o wide
 ```
+
+### 5. Просто деплоим приложение 
+- Конфигурируем Application манифест
+<details> <summary> argocd-conf.yaml </summary>
+
+```yaml
+apiVersion: argocdproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+
+source:
+  repoURL: ssh://git@IP:PORT/path/to/file
+  targetRevision: HEAD
+  path: guestbook
+
+destination:
+  server: https://kubernetes.default.svc
+  namespace: guestbook
+
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
+    -  PrunePropagationPolicy=foreground
+  retry:
+    limit: 3
+    backoff:
+      duration: 5s
+      maxDuration: 3m
+      factor: 2
+```
+
+```bash
+kubectl apply -f argocd-conf.yaml
+kubectl get application -n argocd # чтобы проверить, что всё работает
+```
+</summary></details>
+
+### 6. Делаем Ingress для приложения
+
