@@ -23,6 +23,7 @@ Email: alekcwdsa@gmail.com
 | Проблема | Решение | Ссылка |
 | :--- | :--- | :--- |
 | Ошибка 'no such host' (IPv6) | Отключение IPv6 и настройка DNS | [Решение](./Docker-troubleshooting/combating-IPv6-priotization.md) |
+| Миграция конфигов Nginx и SSL | Извлечение конфигов из работающего конта через bash -c, настройка HTTPS редиректа | ./  |
 
 </details>
 
@@ -31,8 +32,8 @@ Email: alekcwdsa@gmail.com
   
 | Проблема | Решение | Ссылка |
 | :--- | :--- | :--- |
-| Динамически не настроились PVC и таймауты при деплое GitLab | Редактирование StorageClass, ручное создание бакетов и фикс MTU | [Решение](./K8s-troubleshooting/gitlab-k8s-pvc-network-fix.md) |
-| Недоступность APT-репозиториев K8s | Установка бинарников напрямую, настройка containerd, ручное создание systemd-unit | [Решение](./K8s-troubleshooting/K8s-binary-installing.md)
+| Динамически не настроились PVC и таймауты при деплое GitLab | Редактирование StorageClass, ручное создание бакетов и фикс MTU | [Решение](./K8s-troubleshooting/gitlab-k8s-pvc-network-fix.md) |  
+| Недоступность `apt`-репозиториев K8s | Установка бинарников напрямую, настройка containerd, ручное создание systemd-unit | [Решение](./K8s-troubleshooting/K8s-binary-installing.md) |
 </details>
 
 <details open>
@@ -47,10 +48,25 @@ Email: alekcwdsa@gmail.com
 <details>
   <summary> Linux </summary>
 
+| Проблема | Решение | Ссылка |
+| :--- | :--- | :--- |
+
+
+</details>
+<details>
+  <summary> IaC </summary>
+
+| Проблема | Решение | Ссылка |
+| :--- | :--- | :--- |
+| Автоматизация развёртывания Docker (Ansible) | Написание плейбука для DNF/YUM, управление правами пользователя | ./ |
+  
 </details>
 
 <details>
   <summary> Сети </summary>
+  
+| Проблема | Решение | Ссылка |
+| :--- | :--- | :--- |
 
 </details>
 
@@ -61,5 +77,4 @@ Email: alekcwdsa@gmail.com
 | :--- | :--- | :--- |
 | Падение Es при старте из-за Race Condition | Внедрение Healthcheck и Sequential Startup | [Решение](./ELK-troubleshooting/fix-race-condition-elasticsearch.md) |
     
- 
 </details>
