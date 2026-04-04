@@ -88,13 +88,13 @@ kubectl get svc -n ingress-nginx
 <details> <summary> Последующая работа с ArgoCD </summary> 
 - В ArgoCD мы подключаемся по SSH:
   Settings > Repositories > Connect Repo (По SSH)    
-Важно: Для нестандартного SSH порта URL долже быть в формате ssh://git@host:port.git, а не git@host:path.git  
+Важно: Для нестандартного SSH порта URL должен быть в формате ssh://git@host:port.git, а не git@host:path.git  
 
   И дальше идёт проблема!  
 </details>
 
 ### 2. Анализ проблемы
-- Проблема: Репозиторий показывает Failed.   
+- Проблема: статус репозитория Failed.   
 - В логах описывается `dial tcp <IP>:<PORT> connect: connection timed out  `
 - При этом с самой виртуалки GitLab доступен
 `nc -zv <IP_GITLAB> <PORT_GITLAB> - Connection succeeded `
@@ -209,7 +209,7 @@ kubectl get application -n argocd # чтобы проверить, что всё
 </summary></details>
 
 ### 6. Делаем Ingress
-<details> <summary> ingress.nginx-conf </summary>
+<details> <summary> ingress.nginx.yaml </summary>
 
 ```yaml
 apiVersion: networking.k8s.io/v1
