@@ -208,5 +208,37 @@ kubectl get application -n argocd # чтобы проверить, что всё
 ```
 </summary></details>
 
-### 6. Делаем Ingress для приложения
+### 6. Делаем Ingress
+<details> <summary> ingress.nginx-conf </summary>
 
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: <INGRESSNAME>
+  namespace: <NAME>
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: <HOSTNAME>
+    http:
+      paths: /
+      pathType: Prefix
+      backend:
+        service:
+          name: <INGRESSNAME>
+          port:
+            number: 80
+```
+
+- Добавляем всё также в hosts. Вводим туда имя из host строки конфига
+</details>
+
+- Открываем!
+http://<INGRESSHOSTNAME>:31951
+
+### Итоги 
+- Узнал, что CNI может спокойно захватить всю физическую подсеть. Теперь проверяю чтоб cni не пересекался с с сетью хоста
+- kubectl exec не всегда доступен. В итоге приходится пользоваться crictl и nsenter
