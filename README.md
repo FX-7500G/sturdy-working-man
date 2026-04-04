@@ -29,6 +29,7 @@ Hi, Everyone! A collection of real infrastructure problems I've debugged and sol
 | Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Legacy Pipeline Refactoring | Устранение ошибок SSL , миграция переменных, Внедрение цикла ожидания готовности Docker-демона | [Решение](./CI-CD-troubleshooting/legacy-k8s-deploy.md) |
+| ArgoCD не коннектится к GitLab, конфликт подсетей в CNI calico |  Диагностика через nsenter, перенос IPPool кластера на другой CIDR | [Решение](./CI-CD-troubleshooting/argocd-calico-cidr-fix.md)
   
 </details>
 
