@@ -34,14 +34,6 @@ Hi, Everyone! A collection of real infrastructure problems I've debugged and sol
 </details>
 
 <details>
-  <summary> Linux </summary>
-
-| Problem | Solution | Link |
-| :--- | :--- | :--- |
-
-
-</details>
-<details>
   <summary> IaC </summary>
 
 | Problem | Solution | Link |
