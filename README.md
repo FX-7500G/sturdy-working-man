@@ -54,7 +54,7 @@ Hi, Everyone! A collection of real infrastructure problems I've debugged and sol
 <details>
   <summary>📊 Monitoring and parsing logs  </summary>
 
-| Проблема | Решение | Ссылка |
+| Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Падение Es при старте из-за Race Condition | Внедрение Healthcheck и Sequential Startup | [Решение](./ELK-troubleshooting/fix-race-condition-elasticsearch.md) |
     
