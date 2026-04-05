@@ -10,7 +10,6 @@ Hi, Everyone! A collection of real infrastructure problems I've debugged and sol
 | Problem | Solution | Link |
 | :--- | :--- | :--- |
 | Ошибка 'no such host' (IPv6) | Отключение IPv6 и настройка DNS | [Решение](./Docker-troubleshooting/combating-IPv6-priotization.md) |
-| Миграция конфигов Nginx и SSL | Извлечение конфигов из работающего конта через bash -c, настройка HTTPS редиректа | ./  |
 
 </details>
 
