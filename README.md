@@ -55,6 +55,6 @@ Hi, Everyone! A collection of real infrastructure problems I've debugged and sol
 
 | Problem | Solution | Link |
 | :--- | :--- | :--- |
-| Падение Es при старте из-за Race Condition | Внедрение Healthcheck и Sequential Startup | [Решение](./ELK-troubleshooting/fix-race-condition-elasticsearch.md) |
+| Падение Es при старте из-за Race Condition | Внедрение Healthcheck и Sequential Startup | [Решение](.ELK-troubleshooting/ELK_racecond.config/race-condition-elasticsearch.md) |
     
 </details>
